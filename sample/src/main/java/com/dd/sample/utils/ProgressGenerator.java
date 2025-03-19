@@ -3,6 +3,7 @@ package com.dd.sample.utils;
 import com.dd.processbutton.ProcessButton;
 
 import android.os.Handler;
+import java.security.SecureRandom;
 
 import java.util.Random;
 
@@ -36,7 +37,7 @@ public class ProgressGenerator {
         }, generateDelay());
     }
 
-    private Random random = new Random();
+    private Random random = new SecureRandom();
 
     private int generateDelay() {
         return random.nextInt(1000);
